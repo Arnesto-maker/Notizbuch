@@ -1,0 +1,20 @@
+.footer-content{
+    display: flex;
+    justify-content: center;
+    height: 16vh;
+    color: white;
+    align-items: center;
+    max-width: 1440px;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+}
+.notebook-footer-icon{
+    width: 24px;
+    height: 24px;
+}
+.notebook-footer{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}

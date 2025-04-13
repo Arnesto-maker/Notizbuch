@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizbuch</title>
+    <link rel="icon" href="icons/vector-notepad-2111645_1280.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/standard.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/hamburger.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+</head>
+
+<body onload="init()">
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="icons/vector-notepad-2111645_1280.png" alt=" Notizbook" class="logo-img">
+                <h1>Notizbuch</h1>
+            </div>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="notebook-header-eintrag" id="notebookHeaderEintrag">
+                    <h3>Eintrag:</h3>
+                    <div id="notebookHeaderEintragAnzahl"></div>
+                </div>
+                <nav id="nav-hamburger">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="main-content">
+                <div class="note-content-parent" id="noteContent">
+                    <div class="note-content-title-input" id="noteContentTitleInput">
+                        <h3>Add title:</h3>
+                        <input type="text" id="noteContentTitle" placeholder="Titel">
+                    </div>
+                    <div class="note-content-inside" id="noteContentInside">
+
+                        <label for="noteContentText">
+                            <h3>Notiz Hinzufügen: </h3>
+                        </label>
+                        <textarea name="Notiz" id="noteContentText" placeholder="Notiz"></textarea>
+
+                    </div>
+                    <div class="add-content" id="addContent">
+                        <button id="addContentButton" onclick="addNote(),reload()">Hinzufügen</button>
+                    </div>
+                </div>
+            </div>
+            <div class="note-content-output" id="noteContentOutput"></div>
+            <div class="main-sidebar" id="main-sidebar">
+             <ul>
+                <li><a href="index-archive.html" target="_blank" onclick="closeMenu()"> <h3>Archive </h3></a></li>
+                <li><a href="index-trash.html"  onclick="closeMenu()"><h3>Trash</h3></a></li>
+                <li><a href="index.html"  onclick="closeMenu()"><h3>Main Page</h3></a></li>
+             </ul>
+            </div>
+        </div>
+    </section>
+    <div class="dialog">
+        <div id="dialogInside">
+            <div class="toolbars">
+                <div id ="archievieren"></div>
+                <div id="löschen"></div>
+                <div id ="erledigt"></div>
+                <button onclick="closeDialog(event)">X</button>
+            </div>
+            <div class="noteTitle" id="noteTitle"><!-- hier wird gerendert --></div>
+            <div class="noteInDialog" id="noteInDialog"><!-- hier wird gerendert --></div>
+            <div class="toolbars-footer">
+                <button id="prev" onclick="prev()">prev</button>
+                <div id="noteNumber"><!-- hier wird gerendert --></div>
+                <button id="next" onclick="next()">next</button>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="notebook-footer">
+                <img src="icons/vector-notepad-2111645_1280.png" alt="notebook-footer-icon"
+                    class="notebook-footer-icon">
+                <h3>Notizbuch</h3>
+            </div>
+            <div>© 2025 Notizbuch | Alle Rechte vorbehalten</div>
+
+
+        </div>
+    </footer>
+
+</body>
+<script src="script/hamburger.js"></script>
+<script src="script/template.js"></script>
+<script src="script/dialog.js"></script>
+<script src="script/noteBook2.js"></script>
+<script src="script/controleDone.js"></script>
+
+</html>

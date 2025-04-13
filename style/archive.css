@@ -1,0 +1,18 @@
+.main-content-archive {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+    color: white;
+    align-items: center;
+    gap: 16px;
+}
+.archive-notes{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    flex-wrap: wrap;
+}

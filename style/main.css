@@ -1,0 +1,213 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 68vh;
+    max-width: 1440px;
+    flex: 1;
+    position: relative;
+}
+
+.note-content-parent {
+    width: 313.21px;
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: black;
+}
+.note-content-output {
+    display: flex;
+    
+    height: 68vh;
+    gap: 16px;
+    color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+.output{
+    height: 96px;
+    width: 96px;
+    background-color: rgba(19, 19, 19, 0.445);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: normal;
+    gap: 24px
+
+}
+/* #done {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+}
+#done.active {
+    background-color: green;
+    transition: all 0.3s ease-in-out;
+    
+} */
+.output-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+.output:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+.note-content-title-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    color: white;
+    gap: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#noteContentTitle{
+    border-radius: 8px;
+    
+}
+.note-content-inside {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 50vh;
+    gap: 16px;
+    padding-top: 16px;
+    color: white;
+    padding-left: 16px; 
+    padding-right: 16px;
+    
+}
+#noteContentText{
+    display: flex;
+    width: 100%; 
+    height: 35vh;
+    resize: none;
+    border-radius: 8px;
+    padding: 0;
+
+}
+
+.add-content {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    color: white;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+
+}
+
+
+.main-sidebar {
+    width: 20%;
+    height: 68vh;
+    background-color: #09212a;
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    gap: 8%;
+    position: absolute;
+    right: -20%;
+    top: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+#main-sidebar.active {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    right: 0;
+}
+.trash-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.deletedNote:hover {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.816);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dialog.active {
+    display: flex;
+}
+#dialogInside {
+    background-color: rgb(0, 0, 0);
+    width: 400px;
+    height: 60vh;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.toolbars{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.noteTitle{
+    background-color: black;
+    height: 8vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+   
+}
+.noteInDialog{
+    background-color:white;
+    height: 30vh;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.toolbars-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+}
+#noteNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

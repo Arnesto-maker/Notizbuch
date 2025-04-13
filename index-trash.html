@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash</title>
+    <link rel="icon" href="icons/vector-notepad-2111645_1280.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/standard.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/hamburger.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/archive.css">
+    </head>
+<body onload="init()">
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="icons/vector-notepad-2111645_1280.png" alt=" Notizbook" class="logo-img">
+                <h1>Notizbuch</h1>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <nav id="nav-hamburger">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="main-content main-content-archive">
+             <h2>Trash:</h2>
+             <div class="archive-notes" id="trashNotes">
+                <!-- hier werden die gelöschten Notizen gerendert -->
+             </div>
+            </div>
+            <div class="main-sidebar" id="main-sidebar">
+                <ul>
+                    <li><a href="index-archive.html" target="_blank" onclick="closeMenu()"> <h3>Archive </h3></a></li>
+                    <li><a href="index-trash.html" target="_blank" onclick="closeMenu()"><h3>Trash</h3></a></li>
+                    <li><a href="index.html" target="_blank" onclick="closeMenu()"><h3>Main Page</h3></a></li>
+                 </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="notebook-footer">
+                <img src="icons/vector-notepad-2111645_1280.png" alt="notebook-footer-icon"
+                    class="notebook-footer-icon">
+                <h3>Notizbuch</h3>
+            </div>
+            <div>© 2025 Notizbuch | Alle Rechte vorbehalten</div>
+
+
+        </div>
+    </footer>
+    
+</body>
+<script src="script/hamburger.js"></script>
+<script src="script/template.js"></script>
+<script src="script/dialog.js"></script>
+<script src="script/noteBook2.js"></script>
+<script src="script/trash.js"></script>
+</html>
