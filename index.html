@@ -22,10 +22,6 @@
             </div>
 
             <div class="hamburger-menu" id="hamburger-menu">
-                <div class="notebook-header-eintrag" id="notebookHeaderEintrag">
-                    <h3>Eintrag:</h3>
-                    <div id="notebookHeaderEintragAnzahl"></div>
-                </div>
                 <nav id="nav-hamburger">
                     <div id="hamburger">
                         <span></span>
@@ -39,6 +35,7 @@
     <section>
         <div class="main">
             <div class="main-content">
+                <button id="addNoteButton" onclick="showAddNoteFunction()">+</button>
                 <div class="note-content-parent" id="noteContent">
                     <div class="note-content-title-input" id="noteContentTitleInput">
                         <h3>Add title:</h3>
@@ -59,20 +56,36 @@
             </div>
             <div class="note-content-output" id="noteContentOutput"></div>
             <div class="main-sidebar" id="main-sidebar">
-             <ul>
-                <li><a href="index-archive.html" target="_blank" onclick="closeMenu()"> <h3>Archive </h3></a></li>
-                <li><a href="index-trash.html"  onclick="closeMenu()"><h3>Trash</h3></a></li>
-                <li><a href="index.html"  onclick="closeMenu()"><h3>Main Page</h3></a></li>
-             </ul>
+                <ul>
+                    <li><a href="index-archive.html" target="_blank" onclick="closeMenu()">
+                            <h3>Archive </h3>
+                        </a>
+                    </li>
+                    <li><a href="index-trash.html" onclick="closeMenu()">
+                            <h3>Trash</h3>
+                        </a>
+                    </li>
+                    <li><a href="index.html" onclick="closeMenu()">
+                            <h3>Main Page</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="notebook-header-eintrag" id="notebookHeaderEintrag">
+                            <h3>Eintrag:</h3>
+                            <div id="notebookHeaderEintragAnzahl"></div>
+                        </div>
+                    </li>
+                 
+                </ul>
             </div>
         </div>
     </section>
     <div class="dialog">
         <div id="dialogInside">
             <div class="toolbars">
-                <div id ="archievieren"></div>
+                <div id="archievieren"></div>
                 <div id="löschen"></div>
-                <div id ="erledigt"></div>
+                <div id="erledigt"></div>
                 <button onclick="closeDialog(event)">X</button>
             </div>
             <div class="noteTitle" id="noteTitle"><!-- hier wird gerendert --></div>
@@ -104,5 +117,6 @@
 <script src="script/dialog.js"></script>
 <script src="script/noteBook2.js"></script>
 <script src="script/controleDone.js"></script>
+<script src="script/addNoteButton.js"></script>
 
 </html>

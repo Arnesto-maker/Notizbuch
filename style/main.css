@@ -10,10 +10,36 @@
 .note-content-parent {
     width: 313.21px;
     height: 68vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     flex: 1;
     background-color: black;
+}
+.note-content-parent.active {
+    display: flex;
+}
+
+#addNoteButton {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1306f8;
+    color: white;
+    border: none;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-size: 32px;
+}
+#addNoteButton.active {
+    background-color: green ;
+}
+
+#addNoteButton:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
 }
 .note-content-output {
     display: flex;
@@ -114,7 +140,7 @@
 
 .main-sidebar {
     width: 20%;
-    height: 68vh;
+    height: 62vh;
     background-color: #09212a;
     color: white;
     display: none;
@@ -210,4 +236,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Mediaquerry */
+
+@media (max-width: 960px) {
+    .main{
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 560px) {
+    .note-content-title-input{
+        flex-direction: column;
+    }
+    .note-content-inside{
+        flex-direction: column;
+    }
+    .main-content{
+        flex-direction: column;
+    }
+    .main{
+        height: unset;
+    }
+    .note-content-output{
+        flex-direction: column;
+    }
+   .notebook-header-eintrag{
+    display: none;
+   }
+    #addNoteButton{
+        right: 16px;
+        bottom: 80px;
+    }
+    #noteContent{
+        position: absolute;
+    }
+    #eintragQuerry{
+        display: flex;
+    }
+
 }
