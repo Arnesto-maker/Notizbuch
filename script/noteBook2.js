@@ -2,12 +2,11 @@ cardTitle = [];
 cardContent = [];
 archivedCardTitle = [];
 archivedCardContent = [];
-eintrage = 0;
-
-function init () {
+trashedCardTitle = [];
+trashedCardContent = [];
+eintrage = 0;function init () {
   getFromStorage();
   renderNote();
-  console.log(trashedCardContent, trashedCardTitle);
   
 }
 function reload () {
