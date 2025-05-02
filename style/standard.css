@@ -23,11 +23,15 @@
     font-family: 'Figtree-Regular';
     margin: 0;
     
+    
 }
 body{
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 100%;
+    
+    
     
  
 }
